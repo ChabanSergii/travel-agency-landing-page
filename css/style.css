@@ -1,0 +1,238 @@
+
+:root {
+    --color-red:rgba(223, 105, 81, 1)
+}
+
+body {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 47px 40px;
+    background-color: rgba(255, 255, 255, 1);
+    background-image: url('/img/top-right-dekor.png');
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 778px 800px;
+}
+
+h1, h2, h3, h4, p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+ul {
+    list-style: none;
+}
+
+a:visited {
+    color: currentColor;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Header */
+.header-container {
+    margin-bottom: 18px;
+}
+
+.header-container,
+.header-nav__list {
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-nav__list {
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 685px;
+    cursor: pointer;
+}
+
+.header-nav__item > a {
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.header-nav__btn {
+    padding: 9px 22px;
+    background: none;
+    border: 1px solid rgba(33, 40, 50, 1);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.header-nav__btn:active {
+    transform: translatey(1px);
+}
+
+.header-nav__language {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+/* Hero */
+.hero-container {
+    margin-top: 18px;
+    margin-bottom: 97px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url('/img/hero/plane.svg');
+    background-repeat: no-repeat;
+    background-position: 680px 40px;
+}
+
+.hero-left,
+.hero-right {
+    max-width: 49%;
+    min-height: 764px;
+}
+
+.hero-right {
+    background-image: url('/img/hero/plane.svg');
+    background-repeat: no-repeat;
+    background-position: 490px 95px;
+}
+
+.hero-left {
+    padding-top: 112px;
+    padding-bottom: 117px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hero-title {
+    text-transform: uppercase;
+    font-style: 20px;
+    font-weight: 700;
+    color: rgba(223, 105, 81, 1);
+}
+
+.hero-main {
+    font-size: 84px;
+    font-weight: 700;
+    color: rgba(24, 30, 75, 1);
+    z-index: 2;
+}
+
+.hero-enjoy {
+    position: relative;
+    background-image: url('/img/hero/enjoy-decore.svg');
+    background-repeat: no-repeat;
+    background-position: 60px bottom;
+}
+
+.hero-description {
+    padding-right: 150px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    color: rgba(94, 98, 130, 1);
+}
+
+.hero-function__inner {
+    max-width: 379px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hero-btn {
+    width: 170px;
+    height: 60px;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+    border: none;
+    border-radius: 10px;
+    background: rgba(241, 165, 1, 1);
+    box-shadow: 0px 20px 35px 0px rgba(241, 165, 1, 0.15);
+}
+
+/* .hero-audio:active, */
+.hero-btn:active {
+    transform: translateY(1px);
+}
+
+
+.hero-audio {
+    cursor: pointer;
+    position: relative;
+    margin-right: auto;
+    margin-left: 44px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--color-red);
+    box-shadow: 0px 15px 30px 0px rgba(223, 105, 81, 0.3);
+    text-wrap: nowrap;
+}
+
+/* .hero-audio:focus, */
+.hero-audio:active {
+    outline: 2px solid rgba(223, 76, 47, .7);
+}
+
+.hero-audio__inner {
+    width: 15px;
+    height: 15px;
+    margin: auto;
+    margin-top: 18px;
+    margin-left: 19px;
+    border-style: solid;
+    border-width: 8px 0 8px 15px;
+    border-color: var(--color-red) var(--color-red) var(--color-red) white;
+    border-radius: 2px;
+}
+
+.hero-audio:focus > .hero-audio__inner {
+    margin-left: 18px;
+    border-width: 8px;
+    border-color: white;
+    /* border-radius: 2px; */
+}
+
+/* .hero-audio:focus > .stop {
+    width: 15px;
+    height: 15px;
+    background: white;
+    border-radius: 2px;
+    margin: auto;
+    margin-top: 18px;
+}
+ */
+.hero-audio::before {
+    content: 'Play Demo';
+    color: black;
+    position: absolute;
+    right: -93px;
+    top: 17px;
+    font-size: 17px;
+    font-weight: 400;
+    color: rgba(104, 109, 119, 1);
+}
+
+.hero-audio:active::before {
+    transform: none;
+}
+
+.hero-img {
+    transform: translateX(-115px);
+}
