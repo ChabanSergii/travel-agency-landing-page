@@ -1,0 +1,68 @@
+
+/* All base styles */
+
+html{
+    background: #FFFCF5;
+}
+
+body {
+    /* outline: 2px solid red; */
+    max-width: 1460px;
+    margin: 0 auto;
+    font-family: 'Poppins-Regular', sans-serif;
+}
+
+.container {
+    /* outline: 2px dotted blue; */
+    max-width: 1213px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 10px;
+}
+
+* {box-sizing: border-box;}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    text-wrap: balance;
+}
+
+p {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+    text-wrap: nowrap;
+}
+
+a:visited {color: var(--text-color);}
+
+
+button {
+    padding: 0;
+    cursor: pointer;
+    text-wrap: nowrap;
+}
+
+img {width: 100%;}
+
+address {
+    font-style: normal;
+}
+
+*:focus-visible {
+    outline: 3px solid var(--main_color);
+    /* outline-offset: 3px; */
+}
+
+select {
+    cursor: pointer;
+}

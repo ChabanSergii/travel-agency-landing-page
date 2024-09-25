@@ -1,0 +1,70 @@
+{
+  "name": "travel-agency-landing-page",
+  "version": "1.0.0",
+  "main": "index.js",
+  "homepage": "https://ChabChabik.github.io/",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp --production",
+    "deploy": "gh-pages -d dist"
+  },
+  "browserslist": [
+    "last 7 versions"
+  ],
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@babel/core": "7.25.2",
+    "@babel/preset-env": "7.25.4",
+    "browser-sync": "3.0.2",
+    "css-loader": "7.1.2",
+    "del": "6.1.1",
+    "gh-pages": "6.1.1",
+    "gulp": "5.0.0",
+    "gulp-autoprefixer": "8.0.0",
+    "gulp-avif": "1.1.1",
+    "gulp-babel": "8.0.0",
+    "gulp-clean": "0.4.0",
+    "gulp-concat": "2.6.1",
+    "gulp-cssimport": "7.0.0",
+    "gulp-csso": "4.0.1",
+    "gulp-fonter": "0.3.0",
+    "gulp-group-css-media-queries": "1.2.2",
+    "gulp-htmlmin": "5.0.1",
+    "gulp-if": "3.0.0",
+    "gulp-imagemin": "7.1.0",
+    "gulp-include": "2.4.1",
+    "gulp-load-plugins": "2.0.8",
+    "gulp-newer": "1.4.0",
+    "gulp-notify": "4.0.0",
+    "gulp-plumber": "1.2.1",
+    "gulp-pug": "5.0.0",
+    "gulp-rename": "2.0.0",
+    "gulp-replace": "^1.1.4",
+    "gulp-sass": "5.1.0",
+    "gulp-sass-glob": "1.1.0",
+    "gulp-shorthand": "1.1.0",
+    "gulp-size": "4.0.1",
+    "gulp-svg-sprite": "2.0.3",
+    "gulp-ttf2woff2": "4.0.1",
+    "gulp-typograf": "^4.1.0",
+    "gulp-uglify-es": "3.0.0",
+    "gulp-webp": "4.0.1",
+    "gulp-webp-css": "1.1.0",
+    "gulp-webp-html-nosvg": "1.1.1",
+    "normalize.css": "^8.0.1",
+    "sass": "1.77.8",
+    "style-loader": "4.0.0",
+    "webpack": "5.94.0",
+    "webpack-stream": "7.0.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
+}
