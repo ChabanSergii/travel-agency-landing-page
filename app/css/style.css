@@ -1,9 +1,12 @@
 :root {
+    --main-font: "Poppins", sans-serif;
+	--title-font: "Volkhov", serif;
     --color-red: rgba(223, 105, 81, 1);
     --color-white: rgba(255, 255, 255, 1);
     --color-btn_nav: rgba(33, 40, 50, 1);
     --color-btn_hero: rgba(241, 165, 1, 1);
     --color-title_main: rgba(24, 30, 75, 1);
+    --color-play: rgba(104, 109, 119, 1);
     --color-title_card: rgba(8, 8, 9, 1);
     --color-form: rgba(223, 215, 249, 0.2);
     --color-form_btn:rgba(255, 148, 109, 1);
@@ -60,7 +63,6 @@ body {
 
 .header-container,
 .header-nav__list {
-    /* height: 40px; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -80,6 +82,7 @@ body {
 .header-nav__item > a {
     font-size: 17px;
     font-weight: 400;
+    color: var(--color-btn_nav);
 }
 
 .header-nav__btn {
@@ -87,7 +90,6 @@ body {
     background: none;
     border: 1px solid var(--color-btn_nav);
     border-radius: 5px;
-    cursor: pointer;
 }
 
 .header-nav__btn:active {
@@ -97,7 +99,6 @@ body {
 .header-nav__language {
     border: none;
     background: none;
-    cursor: pointer;
 }
 
 /* Hero */
@@ -124,17 +125,21 @@ body {
 }
 
 .hero-title {
+    margin-bottom: 24px;
     text-transform: uppercase;
-    font-style: 20px;
+    font-size: 20px;
     font-weight: 700;
     color: var(--color-red);
 }
 
 .hero-main {
+    margin-bottom: 30px;
+    font-family: var(--title-font);
     font-size: 84px;
-    font-weight: 700;
     color: var(--color-title_main);
     z-index: 2;
+    letter-spacing: -3.36px;
+    line-height: 89px;
 }
 
 .hero-enjoy {
@@ -145,6 +150,7 @@ body {
 }
 
 .hero-description {
+    margin-bottom: 34px;
     padding-right: 150px;
     font-size: 16px;
     font-weight: 400;
@@ -169,7 +175,6 @@ body {
     border-radius: 10px;
     background: var(--color-btn_hero);
     box-shadow: var(--shadow-btn_hero);
-    cursor: pointer;
 }
 
 /* .hero-audio:active, */
@@ -215,9 +220,9 @@ body {
 
 .hero-audio::before {
     content: 'Play Demo';
-    color: var(--color-btn_nav);
+    color: var(--color-play);
     position: absolute;
-    right: -93px;
+    right: -113px;
     top: 17px;
     font-size: 17px;
     font-weight: 400;
@@ -262,9 +267,9 @@ body {
 }
 
 .services-main {
+    font-family: var(--title-font);
     margin-bottom: 66px;
     font-size: 50px;
-    font-weight: 700;
     color: var(--color-text_name);
     text-align: center;
 }
@@ -315,7 +320,6 @@ body {
     width: 100px;
     height: 100px;
     content: "";
-    /* display: block; */
     background-color: var(--color-red);
     border-radius: 30px 0 10px 0;
     position: absolute;
@@ -332,8 +336,12 @@ body {
 
 .services-item-title {
     margin-bottom: 15px;
+    font-family: "Open Sans", var(--main-font);
+    text-transform: capitalize;
     font-size: 20px;
     font-weight: 600;
+    line-height: normal;
+    text-wrap: nowrap;
     text-align: center;
     color: rgba(30, 29, 76, 1);
 }
@@ -406,10 +414,11 @@ body {
     align-items: center;
 }
 
+.destination-duration,
 .destination-geo > * {
     font-size: 18px;
-    font-weight: bold;
-    line-height: 1;
+    font-weight: 400;
+    line-height: 124.5%;
     color: var(--color-text_description);
 }
 
@@ -417,9 +426,6 @@ body {
     position: relative;
     margin-left: 34px;
     font-size: 16px;
-    font-weight: 700;
-    color: var(--color-text_description);
-    line-height: 1;
 }
 
 .destination-duration > small::before {
@@ -498,13 +504,14 @@ h3 + h2.book-title__aline {
     margin-bottom: 4px;
     font-size: 16px;
     font-weight: 700;
+    line-height: 124.5%;
     color: var(--color-text_description);
 }
 
 .book-item__text {
     width: 100%;
     font-size: 16px;
-    line-height: 20px;
+    line-height: 124.5%;
     font-weight: 400;
     color: var(--color-text_description);
 }
@@ -532,7 +539,9 @@ h3 + h2.book-title__aline {
 .book-card__title {
     font-size: 18px;
     margin-bottom: 13px;
-    font-weight: bold;
+    font-weight: 400;
+    line-height: 124.5%;
+    letter-spacing: 0.27px;
     color: var(--color-title_card);
 }
 
@@ -543,6 +552,8 @@ h3 + h2.book-title__aline {
 .book-card__text {
     font-size: 16px;
     font-weight: 400px;
+    letter-spacing: -0.08px;
+    line-height: 124.5%;
     color: var(--color-text_card);
 }
 
@@ -724,13 +735,23 @@ h3 + h2.book-title__aline {
     margin-bottom: 34px;
     height: 96px;
     text-overflow: ellipsis;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 32px;
 }
 
 .testimonial-name {
-    font-weight: bold;
+    font-weight: 600;
     line-height: 27px;
     color: var(--color-text_name);
     margin-bottom: 5px;
+    line-height: normal;
+}
+
+.testimonial-geo {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: normal;
 }
 
 .swiper-button-next {
@@ -868,6 +889,7 @@ h3 + h2.book-title__aline {
 /* Footer */
 .footer-container {
     margin-top: 100px;
+    padding-bottom: 79px;
     margin-bottom: 100px;
     padding: 30px;
 }
@@ -904,6 +926,7 @@ h3 + h2.book-title__aline {
     font-size: 13px;
     color: var(--color-text_description);
     font-weight: 400;
+    line-height: 124.5%;
 }
 
 .insta {
@@ -916,6 +939,10 @@ h3 + h2.book-title__aline {
     margin-top: 26px;
     margin-bottom: 16px;
     padding-left: 2px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 124.5%;
+    color: var( --color-text_description);
 }
 
 .footer-title {
@@ -923,12 +950,14 @@ h3 + h2.book-title__aline {
     font-size: 21px;
     color: var(--color-title_card);
     font-weight: 700;
+    line-height: 124.5%;
 }
 
 .footer-title__item {
     margin-bottom: 17px;
     font-size: 14px;
     font-weight: 400;
+    line-height: 124.5%;
     color: var(--color-text_description);
 }
 
@@ -938,6 +967,7 @@ h3 + h2.book-title__aline {
     color: var(--color-text_description);
     font-weight: 400;
     font-size: 14px;
+    line-height: 124.5%;
 }
 
 .footer-google {
