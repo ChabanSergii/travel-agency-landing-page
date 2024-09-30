@@ -13,6 +13,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
+    <div class="decor-shadow"></div>
     <header class="header">
         <div class="container header-container">
             <a href="#!">
@@ -50,7 +51,7 @@
         </div>
     </header>
 
-    <main>
+    <main class="main">
         <section class="hero">
             <div class="container hero-container">
                 <div class="hero-left">
@@ -107,7 +108,7 @@
                 <h2 class="services-main">Top Destinations</h2>
                 <ul class="destination-list">
                     <li class="destination-item">
-                        <div class="destination-item__inner">
+                        <article class="destination-item__inner">
                             <div class="destination-geo">
                                 <small>Rome, Italy</small>
                                 <small>$5,42k</small>
@@ -115,10 +116,10 @@
                             <div class="destination-duration">
                                     <small>10 Days Trip</small>
                             </div>
-                        </div>
+                        </article>
                     </li>
                     <li class="destination-item">
-                        <div class="destination-item__inner">
+                        <article class="destination-item__inner">
                             <div class="destination-geo">
                                 <small>London, UK</small>
                                 <small>$4.2k</small>
@@ -126,10 +127,10 @@
                             <div  class="destination-duration">
                                 <small>12 Days Trip</small>
                             </div>
-                        </div>
+                        </article>
                     </li>
                     <li class="destination-item">
-                        <div class="destination-item__inner">
+                        <article class="destination-item__inner">
                             <div class="destination-geo">
                                 <small>Full Europe</small>
                                 <small>$15k</small>
@@ -137,7 +138,7 @@
                             <div class="destination-duration">
                                 <small>28 Days Trip</small>
                             </div>
-                        </div>
+                        </article>
                     </li>
                 </ul>
             </div>
@@ -170,32 +171,41 @@
                     </ul>
                 </div>
                 <div class="book-right">
-                    <div class="book-card__big">
-                        <ul class="book-card__list">
-                            <li class="book-card__item">Trip To Greece</li>
-                            <li class="book-card__item">14-29 June|by Robbin Joseph</li>
-                            <li class="book-card__item">
-                                <a href="" class="book-link">
-                                    <img src="/img/book/LEAF.svg" alt="leaf">
-                                </a>
-                                <a href="" class="book-link">
-                                    <img src="/img/book/map.svg" alt="map">
-                                </a>
-                                <a href="" class="book-link">
-                                    <img src="/img/book/send.svg" alt="send">
-                                </a>
-                            </li>
-                            <li class="book-card__item">24 people going <span></span></li>
-                        </ul>
-                    </div>
-                    <!-- <div class="book-card__small">
-                        <ul class="book-small__list">
-                            <li class="book-small__item">Ongoing</li>
-                            <li class="book-small__item">Trip to rome</li>
-                            <li class="book-small__item">40% completed</li>
-                            <li class="book-small__item"></li>
-                        </ul>
-                    </div> -->
+                    <article class="book-card__big">
+                        <img src="../images/greece.png" alt="Greece" class="book-img">
+                        <h5 class="book-card__title">Trip To Greece</h5>
+                        <div class="book-card__text book-card__time">
+                            <time datetime="2024-06-14">14 -</time>
+                            <time datetime="2024-06-29">29 June</time>
+                            | by Robbin Joseph
+                        </div>
+                        <div class="book-card__links">
+                            <a href="#!" class="book-link">
+                                <img src="/img/book/LEAF.svg" alt="leaf">
+                            </a>
+                            <a href="#!" class="book-link">
+                                <img src="/img/book/map.svg" alt="map">
+                            </a>
+                            <a href="#!" class="book-link">
+                                <img src="/img/book/send.svg" alt="send">
+                            </a>
+                        </div>
+                        <div class="book-card__text book-card__icon">24 people going <span></span></div>
+                        <div class="book-tooltip">
+                            <img src="../images/tooltip.png" alt="icon" class="book-tooltip__img">
+                            <div class="book-tooltip__text">Ongoing</div>
+                            <a href="#!">
+                                <h5 class="book-tooltip__title">Trip to Greece</h5>
+                            </a>
+                            <div class="book-bar__text"><span class="book-value">40%</span> completed</div>
+                            <div class="book-bar">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="156" height="5" viewBox="0 0 156 5" fill="none">
+                                    <rect width="156" height="5" rx="2.5" fill="#F5F5F5"/>
+                                    <rect width="73" height="5" rx="2.5" fill="#8A79DF"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>

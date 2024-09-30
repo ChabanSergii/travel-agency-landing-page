@@ -4,29 +4,44 @@
     --color-btn_nav: rgba(33, 40, 50, 1);
     --color-btn_hero: rgba(241, 165, 1, 1);
     --color-title_main: rgba(24, 30, 75, 1);
+    --color-title_card: rgba(8, 8, 9, 1);
     --color-form: rgba(223, 215, 249, 0.2);
     --color-form_btn:rgba(255, 148, 109, 1);
     --color-text_description: rgba(94, 98, 130, 1);
     --color-text_name: rgba(20, 24, 62, 1);
+    --color-text_card: rgba(132, 130, 154, 1);
     --shadow-btn_hero: 0px 20px 35px 0px rgba(241, 165, 1, 0.15);
     --shadow-btn_audio: 0px 15px 30px 0px rgba(223, 105, 81, 0.3);
     --shadow-card: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+    --shadow-tooltip: 0px 100px 80px 0px rgba(0, 0, 0, 0.02), 0px 64.815px 46.852px 0px rgba(0, 0, 0, 0.02), 0px 38.519px 25.481px 0px rgba(0, 0, 0, 0.01), 0px 20px 13px 0px rgba(0, 0, 0, 0.01), 0px 8.148px 6.519px 0px rgba(0, 0, 0, 0.01), 0px 1.852px 3.148px 0px rgba(0, 0, 0, 0.00);
     --outline-btn_audio: rgba(223, 76, 47, .7);
 }
 
 body {
     padding: 47px 40px;
     background-color: var(--color-white);
-    background-image: url('/img/top-right-dekor.png');
+    background-image: url('./../images/decor-top-right.png');
     background-repeat: no-repeat;
     background-position: top right;
     background-size: 778px 800px;
+    position: relative;
 }
 
 .container {
     max-width: 1280px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.decor-shadow {
+    width: 478px;
+    height: 496px;
+    background-image: url('./../images/decor-main-shadow.png');
+    background-repeat: no-repeat;
+    position: absolute;
+    background-size: contain;
+    top: 0;
+    left: 0;
 }
 
 /* Header */
@@ -162,7 +177,6 @@ body {
     transform: translateY(1px);
 }
 
-
 .hero-audio {
     cursor: pointer;
     position: relative;
@@ -197,7 +211,6 @@ body {
     margin-left: 18px;
     border-width: 8px;
     border-color: var(--color-white);
-    /* border-radius: 2px; */
 }
 
 .hero-audio::before {
@@ -221,7 +234,7 @@ body {
 
 /* Services */
 .services {
-    background-image: url('/img/services/plus-plus.svg');
+    background-image: url('./../images/decor-plus-plus.svg');
     background-repeat: no-repeat;
     background-position: top right;
     background-size: 153px 166px;
@@ -337,21 +350,23 @@ body {
 }
 
 .destination-list {
-    display: flex;
-    justify-content: space-between;
+    margin-left: 91px;
+    margin-right: 91px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 36px;
     padding-right: 62px;
-    background-image: url('/img/destination/line.png');
+    background-image: url('../images/decor-line.png');
     background-repeat: no-repeat;
     background-position: bottom right;
 }
 
 .destination-item {
-    width: 30%;
     min-height: 457px;
     padding-top: 327px;
     border-radius: 24px;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-    background-image: url('/img/destination/rome.PNG');
+    background-image: url('./../images/rome.png');
     background-size: cover;
     background-repeat: no-repeat;
     cursor: pointer;
@@ -364,11 +379,11 @@ body {
 }
 
 .destination-item:nth-child(2) {
-    background-image: url('/img/destination/london.png'); 
+    background-image: url('./../images/london.png'); 
 }
 
 .destination-item:nth-child(3) {
-    background-image: url('/img/destination/europ.png'); 
+    background-image: url('./../images/europe.png'); 
 }
 
 .destination-item__inner {
@@ -496,32 +511,35 @@ h3 + h2.book-title__aline {
     margin-left: auto;
     margin-right: auto;
     max-width: 370px;
-    min-height: 400px;
-    padding: 181px 24px 31px 25px;
+    padding: 20px 24px 31px 25px;
     border-radius: 26px;
-    background-color: var(--color-white);
-    background-image: url('/img/book/book-girl.png');
-    background-repeat: no-repeat;
-    background-position: center 20px;
     box-shadow: var(--shadow-card);
 }
 
-.book-card__item:first-child {
+.book-img {
+    max-width: 321px;
+    margin-bottom: 26px;
+}
+
+.book-card__title {
     font-size: 18px;
     margin-bottom: 13px;
     font-weight: bold;
-    color: rgba(8, 8, 9, 1);
+    color: var(--color-title_card);
 }
 
-.book-card__item:nth-child(2) {
+.book-card__time {
     margin-bottom: 21px;
+}
+
+.book-card__text {
     font-size: 16px;
     font-weight: 400px;
-    color: rgba(132, 130, 154, 1);
+    color: var(--color-text_card);
 }
 
-.book-card__item:last-child {
-    margin-top: 28px;
+.book-card__links {
+    margin-bottom: 29px;
 }
 
 .book-link {
@@ -538,15 +556,12 @@ h3 + h2.book-title__aline {
     /* transition: outline 0.9s linear; */
 }
 
-.book-card__item:last-child {
+.book-card__icon {
     margin-left: 31px;
-    font-size: 16px;
-    font-weight: 400px;
-    color: rgba(132, 130, 154, 1);
     position: relative;
 }
 
-.book-card__item:last-child::before {
+.book-card__icon::before {
     content: url('/img/book/hotel.svg');
     position: absolute;
     left: -30px;
@@ -554,7 +569,7 @@ h3 + h2.book-title__aline {
     bottom: 0;
 }
 
-.book-card__item:last-child::after {
+.book-card__icon::after {
     content: url('/img/book/like.svg');
     position: absolute;
     right: 0;
@@ -563,8 +578,65 @@ h3 + h2.book-title__aline {
     cursor: pointer;
 }
 
-.book-card__small {
+.book-card__icon:focus + .book-tooltip,
+.book-card__icon:hover + .book-tooltip {
+    opacity: 1;
+}
+
+.book-tooltip {
     position: absolute;
+    display: block;
+    width: 263px;
+    padding: 16px 16px 22px 81px;
+    box-shadow: var(--shadow-tooltip);
+    background-color: var(--color-white);
+    border-radius: 18px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.book-tooltip:hover {
+    opacity: 1;
+}
+
+.book-tooltip__img {
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    left: 20px;
+    top: 17px;
+}
+
+.book-tooltip__text {
+    margin-bottom: 6px;
+    color: var(--color-text_card);
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0.49px;
+}
+
+.book-tooltip__title {
+    margin-bottom: 14px;
+    color: var(--color-title_card);
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: -0.27px;
+}
+
+.book-tooltip__title:hover {
+    color: rgba(138, 121, 223, 1);
+    transition: color 0.3s ease;
+}
+
+.book-bar__text {
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0.49px;
+}
+
+.book-value {
+    color: rgba(138, 121, 223, 1);
 }
 
 /* Testimonial */
@@ -834,7 +906,7 @@ h3 + h2.book-title__aline {
 .footer-title {
     margin-bottom: 34px;
     font-size: 21px;
-    color: rgba(8, 8, 9, 1);
+    color: var(--color-title_card);
     font-weight: 700;
 }
 
