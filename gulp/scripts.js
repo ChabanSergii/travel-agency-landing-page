@@ -48,7 +48,9 @@ function scripts2() {
             }))
         }))
         .pipe(babel()) /* транспилирует новый js code в старый */
+        .pipe(size({ title: "Before: " }))
         .pipe(webpack(require('../config/webpack.config.js')))
+        .pipe(size({ title: "After: " }))
         .pipe(dest(path.js.dest, { sourcemaps: app.isDev }))
         .pipe(dest(path.js.srcapp, { sourcemaps: app.isDev }))
 }

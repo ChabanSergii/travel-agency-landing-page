@@ -11,6 +11,7 @@
 </head>
 <body>
     <div class="decor-shadow"></div>
+    <div class="decor-top-right"></div>
     <header class="header">
         <div class="container header-container">
             <a href="#!">
@@ -213,9 +214,11 @@
                     <h3 class="services-title book-title__aline">Testimonials</h3>
                     <h2 class="services-main book-title__aline">What People Say &#160; About Us</h2>
                     <div class="testimonial-dot">
-                        <img src="/img/testimonils/dot-fill.svg" alt="dot">
-                        <img src="/img/testimonils/dot.svg" alt="dot">
-                        <img src="/img/testimonils/dot.svg" alt="dot">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="87" height="12" viewBox="0 0 87 12" fill="none">
+                            <circle cx="6" cy="6" r="6" fill="#39425D"/>
+                            <circle cx="44" cy="6" r="6" fill="#E5E5E5"/>
+                            <circle cx="81" cy="6" r="6" fill="#E5E5E5"/>
+                        </svg>
                     </div>
                 </div>
                 <div class="testimonial-swiper">
@@ -223,26 +226,26 @@
                             <!-- Additional required wrapper -->
                             <div class="swiper-wrapper">
                             <!-- Slides -->
-                            <div class="swiper-slide">
-                                <picture><source srcset="/img/testimonils/7059b05297b2de0c67e18d6509eef339.webp" type="image/webp"><img src="/img/testimonils/7059b05297b2de0c67e18d6509eef339.png" alt="" class="swiper-avatar"></picture>
+                            <article class="swiper-slide">
+                                <picture><source srcset="./images/ava-mike-tailor.webp" type="image/webp"><img src="./images/ava-mike-tailor.png" alt="Mike Taylor" class="swiper-avatar"></picture>
                                 <p class="testimonial-text">
                                     &#171;On&#160;the Windows talking painted pasture yet its express parties&#160;use. Sure last upon he&#160;same as&#160;knew next. Of&#160;believed or&#160;diverted no.&#187;
                                 </p>
                                 <div class="testimonial-name">Mike Taylor</div>
                                 <div class="testimonial-geo">Lahore, Pakistan</div>
-                            </div>
-                            <div class="swiper-slide">
-                                <picture><source srcset="/img/testimonils/7059b05297b2de0c67e18d6509eef339.webp" type="image/webp"><img src="/img/testimonils/7059b05297b2de0c67e18d6509eef339.png" alt="" class="swiper-avatar"></picture>
+                            </article>
+                            <article class="swiper-slide">
+                                <picture><source srcset="./images/ava-mario-toy.webp" type="image/webp"><img src="./images/ava-mario-toy.png" alt="Mario Toy" class="swiper-avatar"></picture>
                                 <p class="testimonial-text">&#171;Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate fugiat laborum quaerat porro eligendi veritatis iusto totam.&#187;</p>
-                                <div class="testimonial-name">Mario</div>
+                                <div class="testimonial-name">Mario Toy</div>
                                 <div class="testimonial-geo">Kiev, Ukraine</div>
-                            </div>
-                            <div class="swiper-slide">
-                                <picture><source srcset="/img/testimonils/7059b05297b2de0c67e18d6509eef339.webp" type="image/webp"><img src="/img/testimonils/7059b05297b2de0c67e18d6509eef339.png" alt="" class="swiper-avatar"></picture>
+                            </article>
+                            <article class="swiper-slide">
+                                <picture><source srcset="./images/ava-mario-toy.webp" type="image/webp"><img src="./images/ava-mario-toy.png" alt="Anna Strong" class="swiper-avatar"></picture>
                                 <p class="testimonial-text">&#171;Lorem ipsum dolor sit amet consectetur adipisicing elit. Epellendus adipisci consectetur molestias qui fugit. Nobis, dolorum!&#187;</p>
-                                <div class="testimonial-name">Luigi</div>
+                                <div class="testimonial-name">Anna Strong</div>
                                 <div class="testimonial-geo">Rome, Italy</div>
-                            </div>
+                            </article>
                         </div>
                         <!-- If we need navigation buttons -->
                         <div class="swiper-button-prev"></div>
@@ -281,13 +284,13 @@
                     <h3 class="subscribe-title">Subscribe to&#160;get information, latest news and other
                         interesting offers about Jadoo
                     </h3>
-                    <form action="#" method="post" id="form">
-                        <input type="email" name="email" id="email" class="subscribe-input" placeholder="Your email">
+                    <form action="" method="post" id="form">
+                        <input type="email" name="email" id="email" class="subscribe-input" placeholder="Your email" autocomplete="off">
                         <button type="button" class="subscribe-btn">Subscribe</button>
                     </form>
-                    <img src="/img/subscribe-plus-plus.svg" alt="" class="subscribe-plus">
-                    <img src="/img/subscribe-line-left.svg" alt="" class="subscribe-line__left">
-                    <img src="/img/subscribe-line-right.svg" alt="" class="subscribe-line__right">
+                    <img src="./images/decor-subscribe-plus-plus.svg" alt="" class="subscribe-plus">
+                    <img src="./images/decor-subscribe-line-left.svg" alt="" class="subscribe-line__left">
+                    <img src="./images/decor-subscribe-line-right.svg" alt="" class="subscribe-line__right">
                 </div>
             </div>
         </section>
@@ -298,7 +301,9 @@
         <div class="container footer-container">
             <ul class="footer-ul">
                 <li class="footer-item">
-                    <img src="/img/Jadoo-footer.svg" alt="logo jadoo">
+                    <a href="#!" class="footer-logo">
+                        <img src="./images/jadoo.svg" alt="logo jadoo" class="logo">
+                    </a>
                     <div class="footer-text">
                         Book your trip in&#160;minute, get full
                         Control for much longer.

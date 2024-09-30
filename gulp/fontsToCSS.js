@@ -1,23 +1,18 @@
 /* Use only recommended task version for good work */
-const {src, dest, series}       = require('gulp');
+const {src}       		= require('gulp');
 
 
 /* Configs */
 const path              = require('../config/path.js')
-const app               = require('../config/app.js')
-
 const fs 				= require('fs');
-const gulp 				= require('gulp');
-
 const srcFolder 		= path.fonts.src;
-const destFolder 		= path.fonts.dest;
 
 
-gulp.task('fontsStyle', () => {
+function fontsStyle() {
 	// Файл стилей подключения шрифтов
-	let fontsFile = `${srcFolder}/scss/base/_fontsAutoGen.scss`;
+	let fontsFile = `./app/css/block/fontsAutoGen.css`;
 	// Проверяем существуют ли файлы шрифтов
-	fs.readdir(`${destFolder}/fonts/`, function (err, fontsFiles) {
+	fs.readdir(`./app/fonts/src/`, function (err, fontsFiles) {
 		if (fontsFiles) {
 			// Проверяем существует ли файл стилей для подключения шрифтов
 
@@ -58,7 +53,7 @@ gulp.task('fontsStyle', () => {
 						}
 						fs.appendFile(
 							fontsFile,
-							`@font-face {\n\tfont-family: ${fontName};\n\tfont-display: swap;\n\tsrc: url("../fonts/${fontFileName}.woff2") format("woff2"), url("../fonts/${fontFileName}.woff") format("woff");\n\tfont-weight: ${fontWeight};\n\tfont-style: normal;\n}\r\n`,
+							`@font-face {\n\tfont-family: "${fontName}";\n\tfont-display: swap;\n\tsrc: url("../fonts/${fontFileName}.woff2") format("woff2"), url("../fonts/${fontFileName}.woff") format("woff");\n\tfont-weight: ${fontWeight};\n\tfont-style: normal;\n}\r\n`,
 							cb
 						);
 						newFileOnly = fontFileName;
@@ -67,8 +62,8 @@ gulp.task('fontsStyle', () => {
 		}
 	});
 
-	return gulp.src(`${srcFolder}`);
+	return src(`${srcFolder}`);
 	function cb() {}
-});
+};
 
-gulp.task('fontsDev', gulp.series('otfToTtf', 'ttfToWoff', 'fontsStyle'));
+module.exports = fontsStyle;

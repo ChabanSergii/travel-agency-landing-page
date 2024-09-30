@@ -4,22 +4,24 @@ const browserSync                          = require('browser-sync').create();
 
 
 /* Configs */
-const path      = require('./config/path.js')
-const app       = require('./config/app.js')
+const path       = require('./config/path.js')
+const app        = require('./config/app.js')
 /* const gp = require("gulp-load-plugins")(); useful plugin for minify code */
 
 
 /* Plugins */
-const clear     = require('./gulp/clear.js')
-const pug       = require('./gulp/pug.js')
-const page      = require('./gulp/page.js')
-const fonts     = require('./gulp/fonts.js')
-const images    = require('./gulp/images.js')
-const sprite    = require('./gulp/svg.js')
-const css       = require('./gulp/css.js')
-const scss      = require('./gulp/scss.js')
-const scripts   = require('./gulp/scripts.js')
-const avifimg   = require('./gulp/avif.js')
+const clear       = require('./gulp/clear.js')
+const pug         = require('./gulp/pug.js')
+const page        = require('./gulp/page.js')
+const fonts       = require('./gulp/fonts.js')
+const images      = require('./gulp/images.js')
+const sprite      = require('./gulp/svg.js')
+const css         = require('./gulp/css.js')
+const scss        = require('./gulp/scss.js')
+const scripts     = require('./gulp/scripts.js')
+const avifimg     = require('./gulp/avif.js')
+const fontsToCSS  = require('./gulp/fontsToCSS.js')
+const fontsToSASS = require('./gulp/fontsToSASS.js')
 
 
 /* Launching tasks based on changes */
@@ -64,7 +66,7 @@ function building() {
 
 const build = series(
     clear,
-    parallel(page, css, scripts, sprite, images, fonts)
+    parallel(page, css, scripts, sprite, images, fonts, fontsToCSS, fontsToSASS)
 );
 
 const dev   = series(
@@ -74,18 +76,20 @@ const dev   = series(
 
 
 /* Tasks */
-exports.css          = css;
-exports.scss         = scss;
-exports.avifimg      = avifimg;
-exports.images       = images;
-exports.sprite       = sprite;
-exports.fonts        = fonts;
-exports.page         = page;
-exports.pug          = pug;
-exports.building     = building;
-exports.scripts      = scripts;
-exports.watching     = watching;
-exports.clear        = clear;
+exports.css           = css;
+exports.scss          = scss;
+exports.avifimg       = avifimg;
+exports.images        = images;
+exports.sprite        = sprite;
+exports.fonts         = fonts;
+exports.fontsToCSS    = fontsToCSS;
+exports.fontsToSASS   = fontsToSASS;
+exports.page          = page;
+exports.pug           = pug;
+exports.building      = building;
+exports.scripts       = scripts;
+exports.watching      = watching;
+exports.clear         = clear;
 
 
 /* Project assembly */
