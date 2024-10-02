@@ -38,13 +38,13 @@
                         <a href="">Login</a>
                     </li>
                     <li class="header-nav__item">
-                        <button class="header-nav__btn">Sign up</button>
+                        <button class="header-nav__btn" aria-label="Sign up">Sign up</button>
                     </li>
                     <li class="header-nav__item">
                         <select name="language" id="language" class="header-nav__language">
-                            <option selected>EN</option>
-                            <option value="">UA</option>
-                            <option value="">RU</option>
+                            <option selected value="EN">EN</option>
+                            <option value="UA">UA</option>
+                            <option value="RU">RU</option>
                         </select>
                     </li>
                 </ul>
@@ -67,7 +67,7 @@
                     </p>
                     <div class="hero-function__inner">
                         <button class="hero-btn" aria-label="Find out more">Find out more</button>
-                        <div class="hero-audio" tabindex="0" aria-label="Play Demo">
+                        <div class="hero-audio" tabindex="0" role="button" aria-label="Play Demo">
                             <div class="hero-audio__inner stop"></div>
                         </div>
                     </div>
@@ -173,7 +173,7 @@
                 </div>
                 <div class="book-right">
                     <article class="book-card__big">
-                        <img src="../images/greece.png" alt="Greece" class="book-img">
+                        <img src="./../images/greece.png" alt="Greece" class="book-img">
                         <h5 class="book-card__title">Trip To Greece</h5>
                         <div class="book-card__text book-card__time">
                             <time datetime="2024-06-14">14 -</time>
@@ -182,18 +182,21 @@
                         </div>
                         <div class="book-card__links">
                             <a href="#!" class="book-link">
-                                <img src="/img/book/LEAF.svg" alt="leaf">
+                                <!--  <img src="/img/book/LEAF.svg" alt="leaf"> -->
+                                <img src="./../images/sprite.svg#leaf" class="svg-leaf-dims" alt="leaf">
                             </a>
                             <a href="#!" class="book-link">
-                                <img src="/img/book/map.svg" alt="map">
+                                <!-- <img src="/img/book/map.svg" alt="map"> -->
+                                <img src="./../images/sprite.svg#map" class="svg-map-dims" alt="map">
                             </a>
                             <a href="#!" class="book-link">
-                                <img src="/img/book/send.svg" alt="send">
+                                <!--  <img src="/img/book/send.svg" alt="send"> -->
+                                <img src="./../images/sprite.svg#send" class="svg-send-dims" alt="send">
                             </a>
                         </div>
                         <div class="book-card__text book-card__icon">24 people going <span></span></div>
                         <div class="book-tooltip">
-                            <img src="../images/tooltip.png" alt="icon" class="book-tooltip__img">
+                            <img src="./../images/tooltip.png" alt="icon" class="book-tooltip__img">
                             <div class="book-tooltip__text">Ongoing</div>
                             <a href="#!">
                                 <h5 class="book-tooltip__title">Trip to Greece</h5>
@@ -244,15 +247,15 @@
                                 <div class="testimonial-geo">Kiev, Ukraine</div>
                             </article>
                             <article class="swiper-slide">
-                                <img src="../images/ava-mario-toy.png" alt="Anna Strong" class="swiper-avatar">
+                                <img src="../images/ava-anna-strong.png" alt="Anna Strong" class="swiper-avatar">
                                 <p class="testimonial-text">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Epellendus adipisci consectetur molestias qui fugit. Nobis, dolorum!"</p>
                                 <div class="testimonial-name">Anna Strong</div>
                                 <div class="testimonial-geo">Rome, Italy</div>
                             </article>
                         </div>
                         <!-- If we need navigation buttons -->
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
+                        <!-- <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div> -->
                     </div>
                 </div>
             </div>
@@ -283,17 +286,17 @@
         <section class="subscribe">
             <div class="container subscribe-container">
                 <div class="subscribe-form">
-                    <img src="/img/subscribe.svg" alt="" class="subscribe-send">
+                    <img src="../images/icon-form-send.png" class="svg-send-dims subscribe-send" alt="send">
                     <h3 class="subscribe-title">Subscribe to get information, latest news and other
                         interesting offers about Jadoo
                     </h3>
-                    <form action="" method="post" id="form">
-                        <input type="email" name="email" id="email" class="subscribe-input" placeholder="Your email" autocomplete="off">
-                        <button type="button" class="subscribe-btn">Subscribe</button>
+                    <form action="#" method="post" id="form">
+                        <input type="email" name="email" id="email" class="subscribe-input" required placeholder="Your email" autocomplete="off">
+                        <button type="submit" class="subscribe-btn">Subscribe</button>
                     </form>
-                    <img src="../images/decor-subscribe-plus-plus.svg" alt="" class="subscribe-plus">
-                    <img src="../images/decor-subscribe-line-left.svg" alt="" class="subscribe-line__left">
-                    <img src="../images/decor-subscribe-line-right.svg" alt="" class="subscribe-line__right">
+                    <img src="./../images/decor-subscribe-plus-plus.svg" alt="" class="subscribe-plus">
+                    <img src="./../images/decor-subscribe-line-left.svg" alt="" class="subscribe-line__left">
+                    <img src="./../images/decor-subscribe-line-right.svg" alt="" class="subscribe-line__right">
                 </div>
             </div>
         </section>
@@ -356,23 +359,23 @@
                 </li>
                 <li class="footer-item">
                     <div class="footer-social">
-                        <a href="">
-                            <img src="/img/footer/facebook.svg" alt="facebook">
+                        <a href="#!" class="footer-social__icon">
+                            <img src="./../images/sprite.svg#facebook" class="svg-facebook-dims" alt="facebook">
                         </a>
-                        <a href="" class="footer-insta">
-                            <img src="/img/insta.svg" alt="instagram" class="insta">
+                        <a href="#!" class="footer-insta footer-social__icon">
+                            <img src="./../images/sprite.svg#instagram" class="svg-instagram-dims" alt="instagram">
                         </a>
-                        <a href="">
-                            <img src="/img/footer/twitter.svg" alt="twitter">
+                        <a href="#!" class="footer-social__icon">
+                            <img src="./../images/sprite.svg#twitter" class="svg-twitter-dims" alt="twitter">
                         </a>
                     </div>
                     <div class="footer-social__title">Discover our app</div>
                     <div class="footer-app">
-                        <a href="" class="footer-google">
-                            <img src="/img/footer/google.svg" alt="google play">
+                        <a href="#!" class="footer-google">
+                            <img src="./../images/sprite.svg#google" class="svg-google-dims" alt="google">
                         </a>
-                        <a href="">
-                            <img src="/img/footer/apple.svg" alt="app store">
+                        <a href="#!" class="footer-apple">
+                            <img src="./../images/sprite.svg#apple" class="svg-apple-dims"  alt="app store">
                         </a>
                     </div>
                 </li>

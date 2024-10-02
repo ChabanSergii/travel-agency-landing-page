@@ -105,6 +105,7 @@ They might well be outsourced to an external stylesheet of course.
 -->
 
 <style>
+ .svg-apple-dims { width: 100px; height: 35px; }
  .svg-dot-dims { width: 12px; height: 12px; }
  .svg-dot-fill-dims { width: 12px; height: 12px; }
  .svg-facebook-dims { width: 61px; height: 61px; }
@@ -113,6 +114,7 @@ They might well be outsourced to an external stylesheet of course.
  .svg-icon-book-1-dims { width: 47px; height: 48px; }
  .svg-icon-book-2-dims { width: 47px; height: 48px; }
  .svg-icon-book-3-dims { width: 47px; height: 48px; }
+ .svg-icon-send-dims { width: 46px; height: 44px; }
  .svg-icon-services-1-dims { width: 92px; height: 78px; }
  .svg-icon-services-2-dims { width: 168px; height: 154px; }
  .svg-icon-services-3-dims { width: 67px; height: 75px; }
@@ -156,6 +158,12 @@ selector is used to show the very shape that is referenced by the fragment ident
 
             <ul>
 
+             <li title="apple">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#apple" class="svg-apple-dims" alt="apple">
+                    </div>
+                    <h2>apple, </h2>
+                </li>
              <li title="dot">
                     <div class="icon-box">
                         <img src="../sprite.svg#dot" class="svg-dot-dims" alt="dot">
@@ -203,6 +211,12 @@ selector is used to show the very shape that is referenced by the fragment ident
                         <img src="../sprite.svg#icon-book-3" class="svg-icon-book-3-dims" alt="icon-book-3">
                     </div>
                     <h2>icon-book-3, </h2>
+                </li>
+             <li title="icon-send">
+                    <div class="icon-box">
+                        <img src="../sprite.svg#icon-send" class="svg-icon-send-dims" alt="icon-send">
+                    </div>
+                    <h2>icon-send, </h2>
                 </li>
              <li title="icon-services-1">
                     <div class="icon-box">
@@ -302,7 +316,7 @@ selector is used to show the very shape that is referenced by the fragment ident
 
         </section>
         <footer>
-            <p>Generated at Mon, 30 Sep 2024 21:23:37 GMT by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
+            <p>Generated at Wed, 02 Oct 2024 19:58:12 GMT by <a href="https://github.com/svg-sprite/svg-sprite" target="_blank" rel="noopener noreferrer">svg-sprite</a>.</p>
         </footer>
     </body>
 </html>
