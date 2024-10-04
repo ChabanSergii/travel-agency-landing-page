@@ -80,11 +80,41 @@ body {
     cursor: pointer;
 }
 
+.header-nav__item{
+    position: relative;
+}
+
 .header-nav__item > a {
     font-size: 17px;
     font-weight: 400;
     font-family: var(--nav-font);
     color: var(--color-btn_nav);
+}
+
+.marker::after {
+    display: block;
+    content: url('./../images/decor-main-title.svg');
+    position: absolute;
+    background-size: 30px;
+    left: -60px;
+    right: 0;
+    bottom: -10px;
+    /* height: 3px; */
+    opacity: 0;
+    transform: scale(.3);
+}
+
+.marker:first-child:after{
+    transform: scale(.35);
+}
+
+.marker:hover::after{
+    opacity: 1;
+    transition: opacity .2s linear;
+}
+
+.marker_last {
+    margin-right: 200px;
 }
 
 .header-nav__btn {
@@ -97,6 +127,13 @@ body {
 .header-nav__btn:active {
     transform: translateY(1px);
 }
+
+.header-nav__btn:hover {
+    background-color: var(--color-form_btn);
+    color: var(--color-white);
+    transition: all .15s linear;
+    border-color: var(--color-white);
+} 
 
 .header-nav__language {
     border: none;
@@ -166,9 +203,14 @@ body {
 
 .hero-enjoy {
     position: relative;
-    background-image: url('./../images/decor-main-title.svg');
-    background-repeat: no-repeat;
-    background-position: 60px bottom;
+}
+
+.hero-enjoy::after {
+    position: absolute;
+    content: url('./../images/decor-main-title.svg');
+    left: 0;
+    bottom: -18px;
+    z-index: -1;
 }
 
 .hero-description {
@@ -199,7 +241,6 @@ body {
     box-shadow: var(--shadow-btn_hero);
 }
 
-/* .hero-audio:active, */
 .hero-btn:active {
     transform: translateY(1px);
 }
@@ -297,7 +338,7 @@ body {
 .services-list {
     padding-bottom: 33px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 35px;
     background: transparent;
     z-index: 100;
@@ -389,7 +430,7 @@ body {
     margin-left: 91px;
     margin-right: 91px;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     gap: 36px;
     padding-right: 62px;
     background-image: url('./../images/decor-line.png');
@@ -726,6 +767,7 @@ h3 + h2.book-title__aline {
     background-color: var(--color-white);
     border-radius: 10px;
     box-shadow: var(--shadow-card);
+    cursor: pointer;
 }
 
 .swiper-slide > * {
@@ -807,7 +849,7 @@ h3 + h2.book-title__aline {
 
 .logos-list {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 5px;
 }
 
@@ -1026,4 +1068,23 @@ h3 + h2.book-title__aline {
     font-weight: 400;
     font-size: 14px;
     line-height: 124.5%;
+}
+
+@media (max-width: 1025px) {
+    /* Hero 1025px */
+    .hero-main {
+        font-size: 64px;
+    }
+
+    .hero-right::before {
+        left: -50px;
+    }
+    .hero-right::after {
+        left: 70%;
+    }
+
+    /* Destination 1025px */
+    .destination-list {
+        margin: 0;
+    }
 }
