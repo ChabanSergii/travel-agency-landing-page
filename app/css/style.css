@@ -81,6 +81,10 @@ body {
     align-items: center;
 }
 
+.header-logo__link {
+    margin-right: 15px;
+}
+
 .header-logo {
     cursor: pointer;
 }
@@ -336,6 +340,7 @@ body {
     background-color: var(--color-red);
     box-shadow: var(--shadow-btn_audio);
     text-wrap: nowrap;
+    display: flex;
 }
 
 .hero-audio:active {
@@ -346,8 +351,6 @@ body {
     width: 15px;
     height: 15px;
     margin: auto;
-    margin-top: 18px;
-    margin-left: 19px;
     border-style: solid;
     border-width: 8px 0 8px 15px;
     border-color: var(--color-red) var(--color-red) var(--color-red) var(--color-white);
@@ -426,6 +429,7 @@ body {
 .services-item {
     max-width: 267px;
     padding: 120px 42px 45px 44px;
+    margin-bottom: 35px;
     border-radius: 36px;
     background-image: url('./../images/sprite.svg#icon-services-1');
     background-repeat: no-repeat;
@@ -1131,6 +1135,11 @@ h3 + h2.book-title__aline {
     color: var(--color-text_description);
 }
 
+.footer-title__item:hover {
+    color: var(--color-red);
+    transition: color .2s linear;
+}
+
 .footer-social__icon {
     display: inline-block;
 }
@@ -1300,6 +1309,11 @@ h3 + h2.book-title__aline {
         left: 50%;
     }
 
+    .hero-main {
+        font-size: 54px;
+        line-height: 54px;
+    }
+
     .services-list {
         justify-items: center;
     }
@@ -1337,7 +1351,14 @@ h3 + h2.book-title__aline {
         margin-right: auto;
     }
 
+    .subscribe-input {
+        width: 100%;
+    }
+
     .subscribe-btn {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 15px;
         padding: 25px;
     }
 
@@ -1362,5 +1383,188 @@ h3 + h2.book-title__aline {
 
     .testimonial-dot {
         display: none;
+    }
+}
+
+@media (max-width: 426px) {
+    .mobile-nav__list {
+        align-items: flex-start;
+        margin-left: 30%;
+    }
+
+    .hero-container {
+        display: block;
+        margin-bottom: 50px;
+    }
+
+    .hero-left {
+        text-align: center;
+        width: 100%;
+        padding: 15px;
+    }
+
+    .hero-enjoy::after {
+        bottom: -8px;
+        left: -160px;
+    }
+
+    .hero-right {
+        margin-top: 20px;
+    }
+
+    .hero-img {
+        max-width: 425px;
+        position: static;
+    }
+
+    .services-container {
+        margin-top: 50px;
+    }
+
+    .services-main {
+        margin-bottom: 20px;
+        font-size: 35px;
+    }
+
+    .services-list {
+        display: block;
+        padding-right: 0;
+    }
+
+    .services-item {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .destination-container {
+        margin-top: 50px;
+    }
+
+    .destination-list {
+        padding-right: 0;
+    }
+
+    .destination-item:first-child {
+        display: none;
+    }
+
+    .destination-item {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+
+    .book-container {
+        padding: 20px 15px 10px 15px;
+    }
+
+    .book-list {
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+
+    .testimonial-container {
+        margin-top: 50px;
+    }
+
+    .testimonial-container {
+        padding: 15px 15px 15px 50px;
+    }
+
+    .swiper-slide {
+        padding: 20px;
+    }
+
+    .testimonial-text {
+        margin-bottom: 50px;
+    }
+
+    .subscribe-form {
+        padding: 30px;
+        border-top-left-radius: 38px;
+    }
+
+    .subscribe-title {
+        font-size: 23px;
+        line-height: 30px;
+    }
+
+    .subscribe-input {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .footer-container {
+        margin-top: 20px;
+    }
+
+    .footer-copyright {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 376px) {
+    .hero-left {
+        padding: 0;
+    }
+
+    .hero-main {
+        margin-bottom: 20px;
+    }
+
+    .hero-description {
+        text-wrap: balance;
+    }
+
+    .hero-function__inner {
+        display: block;
+    }
+
+    .hero-btn {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .hero-audio {
+        margin-right: auto;
+    }
+
+    .book-list {
+        margin: 0;
+    }
+
+    .book-item {
+        padding: 20px;
+        margin-bottom: 0 !important;
+    }
+
+    .book-item::before {
+        display: inline-block;
+        position: relative;
+        width: 70px;
+        height: auto;
+        top: -15px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .book-tooltip {
+        display: none;
+    }
+
+    .book-container {
+        margin-bottom: 0;
+    }
+
+    .testimonial-container {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 321px) {
+    .mobile-nav__list {
+        margin-left: 25px;
     }
 }
