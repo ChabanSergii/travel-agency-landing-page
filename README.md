@@ -14,11 +14,12 @@
 - HTML5
 - CSS3
 - JavaScript
+- [Swiper](https://swiperjs.com/)
 - [Bootstrap](https://getbootstrap.com/)
 - [Gulp](https://gulpjs.com/docs/en/getting-started/quick-start/)
 - Адаптивный дизайн
 
-## [GitHubPages](https://chabansergii.github.io/cloud-storage-company-landing-page/)
+## [GitHubPages](https://chabansergii.github.io/travel-agency-landing-page/)
 
 ## Пользовательские настройки
 Вы можете изменить следующие файлы для кастомизации:
